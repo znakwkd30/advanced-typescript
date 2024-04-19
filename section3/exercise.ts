@@ -19,6 +19,6 @@ export type Event =
     event: KeyboardEvent;
 };
 
-type EventType = Exclude<Event, { type: "keydown" }>['type'];
+type EventType = Exclude<Event, "keydown">;
 
 type tests = [Expect<Equal<EventType, "click" | "focus">>];
