@@ -2,8 +2,8 @@ import { Equal, Expect } from "../helper";
 
 const rgb = ["red", "green", "blue"] as const;
 
-type RedAndBlue = unknown;
-type RGB = unknown;
+type RedAndBlue = typeof rgb[0 | 1];
+type RGB = typeof rgb[number];
 
 type tests = [
     Expect<Equal<RedAndBlue, "red" | "green">>,
